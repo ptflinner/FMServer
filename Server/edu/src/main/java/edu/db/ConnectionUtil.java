@@ -8,7 +8,7 @@ public class ConnectionUtil {
     {
         if (con != null) return con;
         // get db, user, pass from settings file
-        return getConnection("localhost", "root", "1234");
+        return getConnection("tripdatabase", "root", "1234");
     }
 
     private static Connection getConnection(String db_name,String user_name,String password)

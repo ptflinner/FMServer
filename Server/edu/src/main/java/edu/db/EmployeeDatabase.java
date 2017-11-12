@@ -13,7 +13,7 @@ public class EmployeeDatabase {
 	 private static Connection connection = ConnectionUtil.getConnection();
 	 
 	 public static GetEmployeesResult getEmployees() {
-		  	String sql = "SELECT * FROM users ORDER BY id;";
+		  	String sql = "SELECT * FROM Employees ;";
 	        List<Employee> employees = new ArrayList<>();
 	        boolean success = false;
 
@@ -33,7 +33,7 @@ public class EmployeeDatabase {
 	 }
 	 
 	 public static GetEmployeeByIdResult getEmployeeById(int id) {
-		 String sql = "SELECT * FROM users WHERE id=? ORDER BY id;";
+		 String sql = "SELECT * FROM employees WHERE id=? ;";
 	       	Employee employee = null;
 	        try {
 	            PreparedStatement preparedStatement = connection.prepareStatement(sql);
